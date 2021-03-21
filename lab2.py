@@ -28,8 +28,14 @@ def open_links(links):
 
 
 def main(args):
+    """
+    >>> main(sys.argv)
+    None
+    """
     links = shuffle_links(read_links(args[1]))
     open_links(links)
 
 if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
     main(sys.argv)
